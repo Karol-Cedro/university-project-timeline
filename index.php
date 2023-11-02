@@ -1,5 +1,6 @@
 <?php include_once 'config/init.php'; ?>
 <?php include 'templates/header.php'; ?>
+<style><?php include 'style/style.css'; ?></style>
 
 <div id="visualization"></div>
 

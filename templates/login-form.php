@@ -1,5 +1,6 @@
-<?php include 'header.php'; ?>
+<?php include 'header-login.php'; ?>
 <?php include '../config/init.php'; ?>
+<style><?php include '../style/style.css'; ?></style>
 
 <section class="vh-100">
     <div class="container py-5 h-100">
