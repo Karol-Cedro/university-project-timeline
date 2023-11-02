@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
     <title>Timeline | Politechnika Warszawska</title>
+    <link rel="Shortcut icon" href="https://www.pw.edu.pl/design/pw2021/images/favicon/favicon-32x32.png" type="image/x-icon"/>
     <style>
         body, html {
             font-family: arial, sans-serif;
