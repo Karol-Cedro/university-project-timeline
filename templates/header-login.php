@@ -36,6 +36,7 @@
         <h1 class="mainHeader">Timeline</h1>
 
         <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-primary">Sign-up</button>
         </div>
     </header>
 </div>
