@@ -1,3 +1,5 @@
+<?php include_once 'config/init.php'; ?>
+<style><?php include 'style/style.css'; ?></style>
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -36,8 +38,16 @@
         <h1 class="mainHeader">Timeline</h1>
 
         <div class="col-md-3 text-end">
+            <?php
+            if (isset($_SESSION['id']) && isset($_SESSION['email'])) {?>
+
+            <a href="logout.php" class="btn btn-primary me-2" role="button">Log out</a>
+
+         <?php }else{?>
             <a href="templates/login-form.php" class="btn btn-outline-primary me-2" role="button">Login</a>
             <button type="button" class="btn btn-primary">Sign-up</button>
+
+           <?php } ?>
         </div>
     </header>
 </div>

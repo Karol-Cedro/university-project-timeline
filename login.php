@@ -2,7 +2,7 @@
 <?php
 
 $user= new User();
-session_start();
+
 if (isset($_POST['submit'])){
 
     function validate($data){
@@ -39,7 +39,7 @@ if (isset($_POST['submit'])){
                 $_SESSION['email'] = $result->email;
                 $_SESSION['nickname'] = $result->nickname;
                 $_SESSION['id'] = $result->id;
-                header("Location: admin-page.php");
+                header("Location: index.php");
                 exit();
         }else{
 

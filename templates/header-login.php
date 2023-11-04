@@ -1,3 +1,4 @@
+<style><?php include '../style/style.css'; ?></style>
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>

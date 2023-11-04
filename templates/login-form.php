@@ -1,6 +1,5 @@
-<?php include 'header-login.php'; ?>
 <?php include '../config/init.php'; ?>
-<style><?php include '../style/style.css'; ?></style>
+<?php include 'header-login.php'; ?>
 
 <section class="vh-100">
     <div class="container py-5 h-100">
@@ -23,8 +22,6 @@
                                 <input type="password" id="typePasswordX" class="form-control form-control-lg" name="password"/>
                                 <label class="form-label" for="typePasswordX">Password</label>
                             </div>
-
-<!--                                <button class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Login</button>-->
                             <input class="btn btn-outline-light btn-lg px-5" type="submit" name="submit" value="Login">
                             </form>
                         </div>
