@@ -18,4 +18,15 @@ class User
         $this->db->query("SELECT * FROM users WHERE email='$email' AND password='$password'");
         return $this->db->single();
     }
+
+    public function getUserPasswordById($id){
+        $this->db->query("SELECT * FROM users WHERE id='$id'");
+        return $this->db->single();
+    }
+
+    public function changeUserPassword($password, $id){
+        $this->db->query("UPDATE users SET password='$password' WHERE id='$id'");
+        $this->db->execute();
+    }
+
 }
