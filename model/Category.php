@@ -14,4 +14,9 @@ class Category
         $this->db->query("SELECT * FROM categories");
         return $this->db->resultsSet();
     }
+
+    public function addCategory($name, $color){
+        $this->db->query("INSERT INTO categories(name,color) VALUES ('$name','$color')");
+        $this->db->execute();
+    }
 }

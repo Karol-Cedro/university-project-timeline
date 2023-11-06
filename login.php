@@ -1,24 +1,13 @@
 <?php include_once 'config/init.php'; ?>
+<?php include_once 'utils/validate_input.php'; ?>
 <?php
 
 $user= new User();
 
 if (isset($_POST['submit'])){
 
-    function validate($data){
-
-        $data = trim($data);
-
-        $data = stripslashes($data);
-
-        $data = htmlspecialchars($data);
-
-        return $data;
-
-    }
-
-    $email = validate($_POST['email']);
-    $password = validate($_POST['password']);
+    $email = validateInput($_POST['email']);
+    $password = validateInput($_POST['password']);
 
     if (empty($email)) {
 
@@ -52,7 +41,6 @@ if (isset($_POST['submit'])){
 }else{
 
     header("Location: templates/login-form.php");
-
     exit();
 
 }

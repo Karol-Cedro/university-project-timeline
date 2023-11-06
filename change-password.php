@@ -1,26 +1,14 @@
 <?php include_once 'config/init.php'; ?>
+<?php include_once 'utils/validate_input.php'; ?>
 <?php
 
 $user = new User();
 
 if (isset($_POST['submit']) && isset($_SESSION['id'])) {
 
-    function validate($data)
-    {
-
-        $data = trim($data);
-
-        $data = stripslashes($data);
-
-        $data = htmlspecialchars($data);
-
-        return $data;
-
-    }
-
-    $current_password = validate($_POST['current_password']);
-    $new_password = validate($_POST['new_password']);
-    $confirm_password = validate($_POST['confirm_password']);
+    $current_password = validateInput($_POST['current_password']);
+    $new_password = validateInput($_POST['new_password']);
+    $confirm_password = validateInput($_POST['confirm_password']);
 
     if (empty($current_password)) {
 
