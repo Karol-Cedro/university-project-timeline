@@ -2,7 +2,7 @@
 <?php include 'header-admin.php'; ?>
 
 <?php
-if (isset($_SESSION['id']) && isset($_SESSION['email'])) {?>
+if (isset($_SESSION['id'])) {?>
     <div class="row d-flex justify-content-center align-items-center h-50">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
             <div class="card-body p-5 text-center">
