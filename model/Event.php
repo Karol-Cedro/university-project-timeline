@@ -17,4 +17,11 @@ class Event
                                 ON timeline_events.owner_id=users.id");
         return $this->db->resultsSet();
     }
+
+    public function addEvent($name, $start_date, $end_date, $description, $image, $owner_id, $category_id)
+    {
+        $this->db->query("INSERT INTO timeline_events(name,start_date,end_date,description,image,owner_id,category_id) 
+                                VALUES ('$name','$start_date','$end_date','$description','$image','$owner_id','$category_id')");
+        $this->db->execute();
+    }
 }

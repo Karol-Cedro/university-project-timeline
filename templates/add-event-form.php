@@ -45,6 +45,7 @@ if (isset($_SESSION['id'])) { ?>
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Select Category</label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="category">
+                                    <option disabled selected value> -- select an option -- </option>
                                     <?php foreach ($categories as $category): ?>
                                         <option value="<?php echo $category->id; ?>"><?php echo $category->name ?></option>
                                     <?php endforeach; ?>

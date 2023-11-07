@@ -46,15 +46,14 @@ foreach ($user->getAllUsers() as $row) {
     var container = document.getElementById('visualization');
     var options = {
         showTooltips:true,
-        height:'300px'
+        tooltip: {
+            overflowMethod:'cap'
+        }
     };
 
     var timeline = new vis.Timeline(container);
     timeline.setOptions(options);
     timeline.setGroups(groups);
     timeline.setItems(items);
-
-    const tooltip = document.getElementById('tooltip');
-    const tooltipContent = document.getElementById('tooltip-content');
 
 </script>
