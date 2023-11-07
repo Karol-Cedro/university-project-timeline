@@ -1,4 +1,4 @@
-<?php include_once '../config/init.php'; ?>
+<?php include '../config/init.php'; ?>
 <?php include 'header-admin.php'; ?>
 
 <?php
@@ -37,12 +37,17 @@ if (isset($_SESSION['id'])) { ?>
                                 <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
                             </div>
 
+                            <?php
+                            $category= new Category();
+                            $categories = $category->getAllCategories();
+                            ?>
+
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Select Category</label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="category">
-                                <?php foreach ($categories as $category): ?>
-                                    <option><?php echo $category->name ?></option>
-                                <?php endforeach; ?>
+                                    <?php foreach ($categories as $category): ?>
+                                        <option value="<?php echo $category->id; ?>"><?php echo $category->name ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
 

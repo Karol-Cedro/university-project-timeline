@@ -8,6 +8,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
 }
 ?>
 
-<?php include 'timeline.php'; ?>
+<?php include 'timeline.php';?>
+
+
 
 <?php include 'templates/footer.php'; ?>
