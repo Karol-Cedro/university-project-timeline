@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
 
     if (empty($category_name)) {
 
-        header("Location: templates/add-category-form?error=Name is required");
+        header("Location: templates/add-category-form.php?error=Name is required");
         exit();
 
     } else {
