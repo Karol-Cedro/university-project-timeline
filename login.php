@@ -20,9 +20,9 @@ if (isset($_POST['submit'])){
 
     }else{
 
-        $result = $user->getUserByEmailAndPassword($email,$password);
+        $result = $user->getUserByEmail($email);
 
-        if (!empty($result)) {
+        if (!empty($result) && password_verify($password,$result->password)) {
 
                 $_SESSION['email'] = $result->email;
                 $_SESSION['nickname'] = $result->nickname;

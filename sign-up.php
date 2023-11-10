@@ -34,7 +34,9 @@ if (isset($_POST['submit'])) {
         exit();
     } else {
 
-        $user->addNewUser($email, $password, $nickname);
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        $user->addNewUser($email, $hashed_password, $nickname);
         header("Location: index.php");
         exit();
 

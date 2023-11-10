@@ -15,12 +15,6 @@ class User
         return $this->db->resultsSet();
     }
 
-    public function getUserByEmailAndPassword($email, $password)
-    {
-        $this->db->query("SELECT * FROM users WHERE email='$email' AND password='$password'");
-        return $this->db->single();
-    }
-
     public function getUserPasswordById($id)
     {
         $this->db->query("SELECT * FROM users WHERE id='$id'");
