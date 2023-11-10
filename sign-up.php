@@ -14,23 +14,23 @@ if (isset($_POST['submit'])) {
 
     if (empty($email)) {
 
-        header("Location: templates/sign-up-form.php?error=Email is required");
+        redirect('templates/sign-up-form.php','Email is required' ,'error');
         exit();
 
     } else if (!empty($check_if_email_exists)) {
-        header("Location: templates/sign-up-form.php?error=User with this email already exists");
+        redirect('templates/sign-up-form.php','User with this email already exists' ,'error');
         exit();
 
     } else if (empty($password)) {
 
-        header("Location: templates/sign-up-form.php?error=Password is required");
+        redirect('templates/sign-up-form.php','Password is required' ,'error');
         exit();
 
     } else if (empty($confirm_password)) {
-        header("Location: templates/sign-up-form.php?error=Confirm Password is required");
+        redirect('templates/sign-up-form.php','Confirm Password is required' ,'error');
         exit();
     } else if (empty($nickname)) {
-        header("Location: templates/sign-up-form?error=Nickname is required");
+        redirect('templates/sign-up-form.php','Nickname is required' ,'error');
         exit();
     } else {
 

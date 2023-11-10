@@ -10,12 +10,12 @@ if (isset($_POST['submit'])){
 
     if (empty($email)) {
 
-        header("Location: templates/login-form.php?error=Email is required");
+        redirect('templates/login-form.php','Email is required' ,'error');
         exit();
 
     }else if(empty($password)){
 
-        header("Location: templates/login-form.php?error=Password is required");
+        redirect('templates/login-form.php','Password is required' ,'error');
         exit();
 
     }else{
@@ -30,8 +30,7 @@ if (isset($_POST['submit'])){
                 header("Location: index.php");
                 exit();
         }else{
-
-            header("Location: index.php?error=Incorrect email or password");
+            redirect('templates/login-form.php','Incorrect email or password' ,'error');
             exit();
         }
 

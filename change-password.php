@@ -11,21 +11,21 @@ if (isset($_POST['submit']) && isset($_SESSION['id'])) {
 
     if (empty($current_password)) {
 
-        header("Location: templates/change-password.php?error=Current password is required");
+        redirect('templates/change-password.php','Current password is required' ,'error');
         exit();
 
     } else if (empty($new_password)) {
 
-        header("Location: templates/change-password.php?error=New password is required");
+        redirect('templates/change-password.php','New password is required' ,'error');
         exit();
 
     } else if (empty($confirm_password)) {
 
-        header("Location: templates/change-password.php?error=You need to confirm new password");
+        redirect('templates/change-password.php','You need to confirm new password' ,'error');
         exit();
 
     } else if ($new_password !== $confirm_password) {
-        header("Location: templates/change-password.php?error= New password and confirm password dont match");
+        redirect('templates/change-password.php','New password and confirm password dont match' ,'error');
         exit();
     } else {
 
@@ -36,7 +36,7 @@ if (isset($_POST['submit']) && isset($_SESSION['id'])) {
             header("Location: index.php");
             exit();
         } else {
-            header("Location: templates/change-password.php?error=Wrong password");
+            redirect('templates/change-password.php','Wrong password' ,'error');
             exit();
         }
     }

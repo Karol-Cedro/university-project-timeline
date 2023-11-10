@@ -16,23 +16,23 @@ if (isset($_POST['submit'])) {
 
     if (empty($event_name)) {
 
-        header("Location: templates/add-event-form?error=Event name is required");
+        redirect('templates/add-event-form','Event name is required' ,'error');
         exit();
 
     } else if (empty($start_date)) {
-        header("Location: templates/add-event-form?error=start date is required");
+        redirect('templates/add-event-form','Start date is required' ,'error');
         exit();
     } else if (empty($end_date)) {
-        header("Location: templates/add-event-form?error=end date is required");
+        redirect('templates/add-event-form','End date is required' ,'error');
         exit();
     } else if (empty($description)) {
-        header("Location: templates/add-event-form?error=Description is required");
+        redirect('templates/add-event-form','Description is required' ,'error');
         exit();
     } else if (empty($image)) {
-        header("Location: templates/add-event-form?error=file is required");
+        redirect('templates/add-event-form','File is required' ,'error');
         exit();
     } else if (empty($category_id)) {
-        header("Location: templates/add-event-form?error=Category is required");
+        redirect('templates/add-event-form','Category is required' ,'error');
         exit();
     } else {
         $event->addEvent($event_name, $start_date, $end_date, $description, $image, $owner_id, $category_id);

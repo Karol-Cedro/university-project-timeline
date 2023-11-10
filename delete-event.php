@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $event_id = $_POST['event'];
 
     if (empty($event_id)) {
-        header("Location: templates/delete-event-form.php?error=Event is required");
+        redirect('templates/delete-event-form.php','Event is required' ,'error');
         exit();
     } else {
         $event->deleteEvent($event_id);

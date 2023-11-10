@@ -52,3 +52,4 @@
         </div>
     </header>
 </div>
+<?php displayMessage();?>
