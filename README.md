@@ -13,4 +13,5 @@ Idea was to create platform that let users create their own timelines.
 
 ## Tech Stack
 - PHP 8.2
-
+- MySQL
+- HTML
