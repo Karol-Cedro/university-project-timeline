@@ -1,5 +1,7 @@
 <?php include_once 'config/init.php'; ?>
 
+<button id="printPageButton" onClick="window.print();">Print</button>
+
 <div id="visualization"></div>
 
 <?php

@@ -9,23 +9,39 @@ class User
         $this->db = new Database();
     }
 
-    public function getAllUsers(){
+    public function getAllUsers()
+    {
         $this->db->query("SELECT * FROM users");
         return $this->db->resultsSet();
     }
 
-    public function getUserByEmailAndPassword($email, $password){
+    public function getUserByEmailAndPassword($email, $password)
+    {
         $this->db->query("SELECT * FROM users WHERE email='$email' AND password='$password'");
         return $this->db->single();
     }
 
-    public function getUserPasswordById($id){
+    public function getUserPasswordById($id)
+    {
         $this->db->query("SELECT * FROM users WHERE id='$id'");
         return $this->db->single();
     }
 
-    public function changeUserPassword($password, $id){
+    public function changeUserPassword($password, $id)
+    {
         $this->db->query("UPDATE users SET password='$password' WHERE id='$id'");
+        $this->db->execute();
+    }
+
+    public function getUserByEmail($email)
+    {
+        $this->db->query("SELECT * FROM users WHERE email='$email'");
+        return $this->db->single();
+    }
+
+    public function addNewUser($email, $password, $nickname)
+    {
+        $this->db->query("INSERT INTO users(email,password,nickname) VALUES ('$email','$password','$nickname')");
         $this->db->execute();
     }
 

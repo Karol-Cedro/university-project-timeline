@@ -37,7 +37,7 @@
         <h1 class="mainHeader">Timeline</h1>
 
         <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-primary">Sign-up</button>
+            <a href="sign-up-form.php" class="btn btn-primary" role="button">Sign-up</a>
         </div>
     </header>
 </div>
