@@ -37,7 +37,7 @@
         <h1 class="mainHeader">Timeline</h1>
 
         <div class="col-md-3 text-end">
-            <a href="../logout.php" class="btn btn-primary me-2" role="button">Log out</a>
+            <a id="printPageButton" href="../logout.php" class="btn btn-primary me-2" role="button">Log out</a>
         </div>
     </header>
 </div>

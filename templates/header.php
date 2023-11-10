@@ -42,11 +42,11 @@
             <?php
             if (isset($_SESSION['id']) && isset($_SESSION['email'])) {?>
 
-            <a href="logout.php" class="btn btn-primary me-2" role="button">Log out</a>
+            <a id="printPageButton" href="logout.php" class="btn btn-primary me-2" role="button">Log out</a>
 
          <?php }else{?>
-            <a href="templates/login-form.php" class="btn btn-outline-primary me-2" role="button">Login</a>
-            <a href="templates/sign-up-form.php" class="btn btn-primary" role="button">Sign-up</a>
+            <a id="printPageButton" href="templates/login-form.php" class="btn btn-outline-primary me-2" role="button">Login</a>
+            <a id="printPageButton" href="templates/sign-up-form.php" class="btn btn-primary" role="button">Sign-up</a>
 
            <?php } ?>
         </div>
