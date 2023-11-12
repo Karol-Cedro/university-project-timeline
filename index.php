@@ -8,7 +8,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
 }
 ?>
 
-<div style="padding-left: 20px; padding-right: 20px">
+<div style="padding-left: 50px; padding-right: 50px">
     <?php include 'timeline.php';?>
 </div>
 
